@@ -9,6 +9,10 @@ import { TrainingsComponent } from './trainings/trainings.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {TrainingService} from "./training/training.service";
 import {HttpClientModule} from "@angular/common/http";
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -16,13 +20,17 @@ import {HttpClientModule} from "@angular/common/http";
     AppComponent,
     NewTrainingComponent,
     TrainingsComponent,
+    SignupComponent,
+    LoginComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [TrainingService],
   bootstrap: [AppComponent]
